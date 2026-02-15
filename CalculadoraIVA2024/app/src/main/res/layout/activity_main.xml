@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    style="@style/app"
+    >
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_title"
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="44dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/title"
+        />
+
+    <ImageView
+        android:id="@+id/iv_view"
+        style="@style/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerInside"
+        android:visibility="visible"
+        tools:srcCompat="@drawable/brics_2"
+
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tv_total"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_total"
+        style="@style/tv_total"
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        android:text="@string/tv_total"
+        app:layout_constraintBottom_toTopOf="@id/tv_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_view"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/tv_type"
+        style="@style/select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_type"
+        app:layout_constraintBottom_toTopOf="@id/sp_type"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_total"
+        />
+
+    <Spinner
+        android:id="@+id/sp_type"
+        style="@style/select_sp"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@id/tv_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_type" />
+
+    <TextView
+        android:id="@+id/tv_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_amount"
+        tools:layout_editor_absoluteX="170dp"
+        tools:layout_editor_absoluteY="454dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/et_amount"
+        app:layout_constraintTop_toBottomOf="@id/sp_type"
+        style="@style/input_tv"
+        />
+    <EditText
+        android:id="@+id/et_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/et_amount"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="497dp"
+        app:layout_constraintBottom_toTopOf="@id/btn_calculate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_input"
+        style="@style/input_entry"
+        tools:ignore="LabelFor" />
+
+    <Button
+        android:id="@+id/btn_calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_calculate"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="619dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/btn_calculate"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
